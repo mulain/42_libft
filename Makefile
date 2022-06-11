@@ -6,14 +6,13 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/05/31 15:15:57 by wmardin          ###   ########.fr        #
+#    Updated: 2022/06/11 13:18:34 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
 AR = ar rcs
-
 NAME = libft.a
 
 PATH_ft_is = src/ft_is/
@@ -22,7 +21,7 @@ PATH_ft_mem = src/ft_mem/
 PATH_ft_put = src/ft_put/
 PATH_ft_string = src/ft_string/
 PATH_ft_gnl = src/ft_gnl/
-PATH_ft_printf = src/ft_printf
+PATH_ft_printf = src/ft_printf/
 
 SRC =	$(PATH_ft_is)ft_isalnum.c\
 		$(PATH_ft_is)ft_isalpha.c\
@@ -69,51 +68,28 @@ SRC =	$(PATH_ft_is)ft_isalnum.c\
 		$(PATH_ft_string)ft_toupper.c\
 		$(PATH_ft_gnl)get_next_line.c\
 		$(PATH_ft_gnl)get_next_line_utils.c\
-
-DIR_BACKUP = /mnt/e/42/Projects/Backup/libft_v03_subfolders
-
-DIR_OBJ = obj/
+		$(PATH_ft_printf)ft_checkformat.c\
+		$(PATH_ft_printf)ft_printchar.c\
+		$(PATH_ft_printf)ft_printdecimal.c\
+		$(PATH_ft_printf)ft_printf.c\
+		$(PATH_ft_printf)ft_printhex_lower.c\
+		$(PATH_ft_printf)ft_printhex_upper.c\
+		$(PATH_ft_printf)ft_printint.c\
+		$(PATH_ft_printf)ft_printpointer.c\
+		$(PATH_ft_printf)ft_printstring.c\
+		$(PATH_ft_printf)ft_printunsignedint.c
+		
 OBJ = $(SRC:.c=.o)
-
-#OBJ = $(SRC:.c=.o)
-#$(NAME): $(OBJ)
-#		$(CC) $(CFLAGS) $^ -o $@ 
-
-
 
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-#$(DIR_OBJ)/$(OBJ)%.o: %.c
-#	$(CC) $(CFLAGS) $(CPPFLAGS) -c $@
-#$($<:src/=obj/)
-
-
-#$(DIR_OBJ)$(OBJ):
-#	$(CC) $(CFLAGS) -c -o $(SRC)
-##$^ -o $@
-## the value of ‘$^’ is a list of all the prerequisites of the rule, including the names of the directories in which they were found
-## this will include VPATH found directories
-## and the value of ‘$@’ is the target
-
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(NAME)
 	
 fclean: clean
 	$(RM) $(NAME) a.out
 
 re: fclean all
-
-test:
-	$(CC) $(CFLAGS) $(SRC)
-	./a.out
-
-testnoflag:
-	$(CC) $(SRC)
-	./a.out
-
-save:
-	mkdir -p $(DIR_BACKUP)
-	cp *.c libft.h Makefile $(DIR_BACKUP)
