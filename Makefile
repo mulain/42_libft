@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/06/11 13:18:34 by wmardin          ###   ########.fr        #
+#    Updated: 2022/06/11 13:20:59 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJ) $(NAME)
+	$(RM) $(OBJ)
 	
 fclean: clean
 	$(RM) $(NAME) a.out
