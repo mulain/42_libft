@@ -29,6 +29,7 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
+int		ft_isnumberformat(char *input);
 int		ft_isprint(int c);
 void	*ft_memchr(const void *s, int c, size_t len);
 int		ft_memcmp(const void *b1, const void *b2, size_t len);
