@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 18:36:13 by wmardin           #+#    #+#             */
-/*   Updated: 2022/06/10 21:06:34 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/07/14 21:29:06 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,17 @@ to the first element of the list.
 **lst never changes, only the pointer it references
 is changed.
 
-v = NULL		guarding, in case lst is NULL
+temp = NULL		If lst is NULL, temp would be uninitialized,
+				so it must be initialized here. 
 if (lst)		if lst is not NULL
-	v = *lst	assign v the address pointed to by **lst
-				v now corresponds to the old first link of the list
+	temp = *lst	assign temp the address pointed to by **lst
+				temp now corresponds to the old first link of the list
 				which is therefore now pointed to twice
 *lst = new;		**lst (which is never directly manipulated)
 				now points to the pointer of the new link.
-				the old first link is only pointed to by v now
-new->next = v;	new now links to the old first element. it is
-				now linked to twice, but v will cease to exist
+				the old first link is only pointed to by temp now
+new->next = temp;	new now links to the old first element. it is
+				now linked to twice, but temp will cease to exist
 				after this function terminates.				
 */
 void	ft_lstadd_front(t_list **lst, t_list *new)
