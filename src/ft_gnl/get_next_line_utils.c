@@ -30,10 +30,10 @@ char	*ft_appendbuffertoline(char *line, char *readbuffer, int readreturn)
 
 	i = 0;
 	readbuffer[readreturn] = 0;
-	len_readbuffer = ft_strlen(readbuffer);
+	len_readbuffer = ft_strlen_gnl(readbuffer);
 	if (!line)
 		return (ft_strdup(readbuffer));
-	len_line = ft_strlen(line);
+	len_line = ft_strlen_gnl(line);
 	output = malloc((len_line + len_readbuffer + 1) * sizeof(char));
 	while (line[i])
 	{
@@ -90,7 +90,7 @@ char	*ft_makeremainder_returnoutput(char *line, char **remainder, int fd)
 	int		len_line;
 
 	ind_newline = ft_findnewline(line);
-	len_line = ft_strlen(line);
+	len_line = ft_strlen_gnl(line);
 	if (ind_newline == len_line - 1)
 	{
 		free(remainder[fd]);
@@ -108,7 +108,7 @@ char	*ft_strdup(const char *source)
 	char	*output;
 
 	i = 0;
-	output = malloc((ft_strlen(source) + 1) * sizeof(char));
+	output = malloc((ft_strlen_gnl(source) + 1) * sizeof(char));
 	while (source[i])
 	{
 		output[i] = source[i];
@@ -118,7 +118,7 @@ char	*ft_strdup(const char *source)
 	return (output);
 }
 
-int	ft_strlen(const char *s)
+int	ft_strlen_gnl(const char *s)
 {
 	int	i;
 
