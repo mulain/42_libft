@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/06/12 17:57:43 by wmardin          ###   ########.fr        #
+#    Updated: 2022/08/08 10:16:31 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,3 +106,5 @@ fclean: clean
 	@echo 'fclean done'
 
 re: fclean all
+
+.SILENT: $(OBJ)
