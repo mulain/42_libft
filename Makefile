@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+         #
+#    By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/08/08 10:16:31 by wmardin          ###   ########.fr        #
+#    Updated: 2022/08/30 10:10:09 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,14 +79,14 @@ SRC =	$(PATH_ft_is)/ft_isalnum.c\
 		$(PATH_ft_printf)/ft_printpointer.c\
 		$(PATH_ft_printf)/ft_printstring.c\
 		$(PATH_ft_printf)/ft_printunsignedint.c
-		
+
 #VPATH = obj #obj/ft_is obj/ft_list obj/ft_mem obj/ft_put obj/ft_string obj/ft_gnl obj/ft_printf
 
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
-	@echo '$(NAME) created'
+	@echo '$(NAME) created.'
 
 #$(OBJ):
 #	mkdir obj -p
@@ -99,12 +99,18 @@ all: $(NAME)
 clean:
 	@$(RM) $(OBJ)
 	@rm -rf obj
-	@echo 'clean done'
-	
+	@echo 'clean performed.'
+
 fclean: clean
 	@$(RM) $(NAME) a.out
-	@echo 'fclean done'
+	@echo 'fclean performed.'
 
 re: fclean all
+
+autogit:
+	git add .
+	git commit -m "auto add & push"
+	git push
+	@echo 'git auto add & push performed.'
 
 .SILENT: $(OBJ)
