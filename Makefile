@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/09/16 10:00:32 by wmardin          ###   ########.fr        #
+#    Updated: 2022/09/16 10:04:03 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
 AR = ar rcs
 
-NAME = libft.a
+COLOR = \033[94m
+COLOR_END = \033[0m
 
-FUNCTION_ft_is =
+NAME = libft.a
 
 PATH_ft_is = src/ft_is
 PATH_ft_list = src/ft_list
@@ -41,7 +42,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
-	@echo '$(NAME) created.'
+	@echo "$(COLOR)$(NAME) created.$(COLOR_END)"
 
 $(OBJ_DIR)/%.o: src/%.c
 	@mkdir -p $(OBJ_DIR)
@@ -51,11 +52,11 @@ $(OBJ_DIR)/%.o: src/%.c
 clean:
 	@$(RM) $(OBJ)
 	@rm -rf obj
-	@echo 'clean performed.'
+	@echo "$(COLOR)clean performed.$(COLOR_END)"
 
 fclean: clean
 	@$(RM) $(NAME) a.out
-	@echo 'fclean performed.'
+	@echo "$(COLOR)fclean performed.$(COLOR_END)"
 
 re: fclean all
 
@@ -63,6 +64,6 @@ git:
 	git add .
 	git commit -m "auto add & push"
 	git push
-	@echo 'git auto add & push performed.'
+	@$(COLOR)echo "git auto add & push performed.$(COLOR_END)"
 
 .SILENT: $(OBJ)
