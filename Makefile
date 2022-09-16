@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/09/16 10:04:03 by wmardin          ###   ########.fr        #
+#    Updated: 2022/09/16 10:04:40 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,6 @@ git:
 	git add .
 	git commit -m "auto add & push"
 	git push
-	@$(COLOR)echo "git auto add & push performed.$(COLOR_END)"
+	@echo "$(COLOR)git auto add & push performed.$(COLOR_END)"
 
 .SILENT: $(OBJ)
