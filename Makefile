@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/08/30 10:54:32 by wmardin          ###   ########.fr        #
+#    Updated: 2022/09/16 10:00:32 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ fclean: clean
 
 re: fclean all
 
-autogit:
+git:
 	git add .
 	git commit -m "auto add & push"
 	git push
