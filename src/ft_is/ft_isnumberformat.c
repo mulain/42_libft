@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 22:19:39 by wmardin           #+#    #+#             */
-/*   Updated: 2022/09/16 10:00:22 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/10/28 12:38:43 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ int	ft_isnumberformat(char *input)
 	int		i;
 
 	i = 1;
-	if (input[0] < 47 || input[0] > 58)
+	if (input[0] < '0' || input[0] > '9')
 	{
-		if (input[0] != 45 && input[0] != 43)
+		if (input[0] != '-' && input[0] != '+')
 			return (0);
 		if (!input[1])
 			return (0);
 	}
 	while (input[i])
 	{
-		if (input[i] < 47 || input[i] > 58)
+		if (input[i] < '0' || input[i] > '9')
 			return (0);
 		i++;
 	}
