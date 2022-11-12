@@ -6,7 +6,7 @@
 #    By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 13:39:51 by wmardin           #+#    #+#              #
-#    Updated: 2022/09/16 10:04:40 by wmardin          ###   ########.fr        #
+#    Updated: 2022/11/12 20:50:09 by wmardin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ PATH_ft_string = src/ft_string
 PATH_ft_gnl = src/ft_gnl
 PATH_ft_printf = src/ft_printf
 
-SRC =	$(addprefix $(PATH_ft_is)/, ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isnumberformat.c ft_isprint.c)\
+SRC =	$(addprefix $(PATH_ft_is)/, ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isnumberformat.c ft_isintsize.c ft_isprint.c)\
 		$(addprefix $(PATH_ft_list)/, ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c)\
 		$(addprefix $(PATH_ft_mem)/, ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c)\
 		$(addprefix $(PATH_ft_put)/, ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c)\
@@ -35,8 +35,8 @@ SRC =	$(addprefix $(PATH_ft_is)/, ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdi
 		$(addprefix $(PATH_ft_gnl)/, get_next_line.c get_next_line_utils.c)\
 		$(addprefix $(PATH_ft_printf)/, ft_checkformat.c ft_printchar.c ft_printdecimal.c ft_printf.c ft_printhex_lower.c ft_printhex_upper.c ft_printint.c ft_printpointer.c ft_printstring.c ft_printunsignedint.c)
 
-OBJ	= $(addprefix $(OBJ_DIR)/,$(SRC:src/%.c=%.o))
 OBJ_DIR = obj
+OBJ	= $(addprefix $(OBJ_DIR)/,$(SRC:src/%.c=%.o))
 
 all: $(NAME)
 
