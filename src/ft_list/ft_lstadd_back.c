@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 10:31:23 by wmardin           #+#    #+#             */
-/*   Updated: 2022/07/14 21:31:29 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/11/15 08:28:03 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ new: The address of a pointer to the node to be added to the list.
 return: none.
 Adds the node ’new’ at the end of the list.
 ***ATTENTION: new->next is not set to NULL by this function!***
-This can result in a circle list. For now I decided to keep it this way.
+This can result in a circle list.
 That means that new->next has to be set to NULL outside of this function.
+For now I decided to keep it this way, because lstnew does already
+set new->next to NULL.
 
 	if (!*lst)			list is empty
 		*lst = new;		node new is the only node in the list now

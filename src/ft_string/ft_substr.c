@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:14:52 by wmardin           #+#    #+#             */
-/*   Updated: 2022/05/28 10:47:15 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/11/22 20:48:11 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ The substring begins at index ’start’ and is of
 maximum size ’len’.
 
 Personal Note:
-Only the actually required space is calloc'd.
+Only the actually required space is malloc'd.
+It's ok to use malloc here since ft_strlcpy will NUL-terminate.
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
