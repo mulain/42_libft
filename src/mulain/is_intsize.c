@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:37:28 by wmardin           #+#    #+#             */
-/*   Updated: 2022/12/14 10:58:28 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/12/20 21:26:27 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Check if the evaluated string is an accepted number format first.
 Then run this function to check if the string corresponds to a number in
 int range.
 */
-int	ft_isintsize(char *string)
+int	is_intsize(char *string)
 {
 	int		len;
 

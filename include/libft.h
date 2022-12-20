@@ -29,7 +29,6 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
-int		ft_isnumberformat(char *input);
 int		ft_isprint(int c);
 
 //ft_mem
@@ -77,5 +76,14 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+
+//mulain
+char	*append_char(char *string, char c);
+char	**append_string(char **array, char *string);
+char	*del_singlechar(char *string, int del_pos);
+void	free_2d_char(char **array);
+int		is_intsize(char *string);
+int		is_numberformat(char *input);
+void	print_list_str(t_list *list, char *title);
 
 #endif

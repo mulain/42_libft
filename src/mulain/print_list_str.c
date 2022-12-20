@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printlist.c                                        :+:      :+:    :+:   */
+/*   print_list_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:31:48 by wmardin           #+#    #+#             */
-/*   Updated: 2022/11/18 20:53:53 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/12/20 21:27:54 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Pass <title> to insert an identifier in the box around the list contents.
 "a" -> char[2]
 They all take up 2 more than a normal char.
 */
-void	printlist_str(t_list *list, char *title)
+void	print_list_str(t_list *list, char *title)
 {
 	t_list	*temp;
 	int		len_title;

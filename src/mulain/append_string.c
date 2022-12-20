@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:35:28 by wmardin           #+#    #+#             */
-/*   Updated: 2022/12/14 10:41:45 by wmardin          ###   ########.fr       */
+/*   Updated: 2022/12/20 21:19:59 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,5 @@ char	**append_string(char **array, char *string)
 	i++;
 	result[i] = NULL;
 	free(array);
-	return (result);
-}
-
-/*
-Deletes the char at the position "del_pos" of the string "string".
-*/
-char	*del_singlechar(char *string, int del_pos)
-{
-	char	*result;
-
-	if (!string)
-		return (NULL);
-	string[del_pos] = 0;
-	result = ft_strjoin(string, string + del_pos + 1);
-	free(string);
 	return (result);
 }
