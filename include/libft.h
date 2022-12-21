@@ -85,5 +85,6 @@ void	free_2d_char(char **array);
 int		is_intsize(char *string);
 int		is_numberformat(char *input);
 void	print_list_str(t_list *list, char *title);
+t_list	*get_precedingnode(t_list *node, t_list *list);
 
 #endif
