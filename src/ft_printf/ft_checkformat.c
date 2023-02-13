@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkformat.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: wmardin <wmardin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:37:30 by wmardin           #+#    #+#             */
-/*   Updated: 2022/05/28 10:18:21 by wmardin          ###   ########.fr       */
+/*   Updated: 2023/02/13 20:07:34 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,23 @@ int	ft_checkformat(const char c, va_list args)
 
 	if (c == 'c')
 		prints = ft_printchar(va_arg(args, int));
-	if (c == 's')
+	else if (c == 's')
 		prints = ft_printstring(va_arg(args, char *));
-	if (c == 'p')
+	else if (c == 'p')
 		prints = ft_printpointer(va_arg(args, unsigned long long));
-	if (c == 'd')
+	else if (c == 'd')
 		prints = ft_printdecimal(va_arg(args, int));
-	if (c == 'i')
+	else if (c == 'i')
 		prints = ft_printint(va_arg(args, int));
-	if (c == 'u')
+	else if (c == 'u')
 		prints = ft_printunsignedint(va_arg(args, unsigned int));
-	if (c == 'x')
+	else if (c == 'x')
 		prints = ft_printhex_lower(va_arg(args, int));
-	if (c == 'X')
+	else if (c == 'X')
 		prints = ft_printhex_upper(va_arg(args, int));
-	if (c == '%')
+	else if (c == '%')
 		prints = ft_printchar('%');
+	else if (c == 'f')
+		prints = ft_printfloat(va_arg(args, double));
 	return (prints);
 }

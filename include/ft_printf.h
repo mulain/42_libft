@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wmardin <wmardin@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: wmardin <wmardin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 07:51:38 by wmardin           #+#    #+#             */
-/*   Updated: 2022/05/20 21:48:50 by wmardin          ###   ########.fr       */
+/*   Updated: 2023/02/13 23:30:29 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_printchar(int c);
 int		ft_printstring(char *str);
 int		ft_printpointer(unsigned long long c);
 int		ft_printdecimal(int c);
+int		ft_printfloat(float f);
 int		ft_printint(int c);
 int		ft_printunsignedint(unsigned int c);
 int		ft_printhex_lower(unsigned int c);

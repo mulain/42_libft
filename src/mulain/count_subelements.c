@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_onlydigits.c                                    :+:      :+:    :+:   */
+/*   count_subelements.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wmardin <wmardin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/12 14:56:39 by wmardin           #+#    #+#             */
-/*   Updated: 2023/02/13 20:04:16 by wmardin          ###   ########.fr       */
+/*   Created: 2023/02/13 19:58:59 by wmardin           #+#    #+#             */
+/*   Updated: 2023/02/13 19:59:29 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	is_onlydigits(char *input)
+int	count_subelements(char **arr)
 {
 	int		i;
 
 	i = 0;
-	while (input[i])
-	{
-		if (!ft_isdigit(input[i]))
-			return (false);
+	while (arr[i])
 		i++;
-	}
-	return (true);
+	return (i);
 }
