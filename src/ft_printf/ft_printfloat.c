@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 20:08:19 by wmardin           #+#    #+#             */
-/*   Updated: 2023/02/15 18:02:35 by wmardin          ###   ########.fr       */
+/*   Updated: 2023/02/15 20:05:06 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ but started structure to make a real print float later maybe
 */
 int	ft_printfloat(float f)
 {
-	int		i;
 	int		prints;
 	double	fraction;
 
@@ -47,6 +46,7 @@ int	ft_printfloat(float f)
 	fraction *= PRECISION;
 	prints += write(1, ".", 1);
 	prints += ft_printint((int)fraction);
+	return (prints);
 }
 
 /* int main()
