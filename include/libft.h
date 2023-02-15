@@ -82,14 +82,17 @@ int		ft_lstsize(t_list *lst);
 //mulain
 char	*append_char(char *string, char c);
 char	**append_string(char **array, char *string);
+double	conv_strtod(char *input);
 int		count_occurences(char *str, char c);
 int		count_subelements(char **arr);
 char	*del_singlechar(char *string, int del_pos);
 void	free_2d_char(char **array);
 t_list	*get_precedingnode(t_list *node, t_list *list);
+bool	is_decimalformat(char *input);
 int		is_intsize(char *string);
 int		is_numberformat(char *input);
 bool	is_onlydigits(char *input);
+bool	is_whitespace(char c);
 void	print_list_str(t_list *list, char *title);
 
 #endif

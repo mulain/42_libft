@@ -6,7 +6,7 @@
 /*   By: wmardin <wmardin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 20:08:19 by wmardin           #+#    #+#             */
-/*   Updated: 2023/02/13 23:29:00 by wmardin          ###   ########.fr       */
+/*   Updated: 2023/02/15 18:02:35 by wmardin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ double	mu_fmod(double x, double y)
 /*
 quickndirty, just wanna print real quick.
 but started structure to make a real print float later maybe
-(not just casting to int right away even tho right now its actually worse)
+(not just casting to int right away even though right now its actually worse)
 */
 int	ft_printfloat(float f)
 {
